@@ -27,6 +27,7 @@
 		cmp.config = {
 			customPurposeListLocation: 'docs/purposes.json',
 			globalConsentLocation: 'docs/portal.html',
+			storeConsentGlobally: true,
 			forceLocale: 'da-dk'
 		};
 		return cmp;
