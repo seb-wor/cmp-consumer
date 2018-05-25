@@ -25,7 +25,6 @@
 			}
 		};
 		cmp.config = {
-			customPurposeListLocation: 'docs/purposes.json',
 			globalConsentLocation: '//acdn.origin.appnexus.net/cmp/docs/portal.html',
 			storeConsentGlobally: true,
 			forceLocale: 'da-dk'
