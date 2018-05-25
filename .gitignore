@@ -10,3 +10,4 @@ Dockerfile
 *.lock
 .*ignore
 *.log
+.idea
