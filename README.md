@@ -13,6 +13,6 @@ Some more on local implementations: [https://github.com/appnexus/cmp/issues/58](
 
 ## Install
 
-1. Download `cmp.bundle.js` and `cmp.client-settings.js` files
+1. Download `cmp.bundle.js` and `cmp.client-settings.js` files in correct theme's folder
 2. Paste them in the consumer app somewhere, where it makes send
 3. Link to them in the index.html (or master template file), see example in `index.html`
