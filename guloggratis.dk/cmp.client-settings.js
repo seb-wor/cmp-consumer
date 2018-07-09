@@ -26,7 +26,7 @@
 		};
 		cmp.config = {
 			globalConsentLocation: '//acdn.origin.appnexus.net/cmp/docs/portal.html',
-			storeConsentGlobally: true,
+			storeConsentGlobally: false,
 			forceLocale: 'da-dk'
 		};
 		return cmp;
