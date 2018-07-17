@@ -45,7 +45,7 @@ function handleConsentResult(cmp, vendorList, vendorConsents) {
 				eventAction: 'Visning',
 				eventLabel: window.location.hostname,
 				nonInteraction: true
-			});pubvendors.json
+			});
 		}, 1500);
 	}
 }
