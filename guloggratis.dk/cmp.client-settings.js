@@ -25,7 +25,7 @@
 			}
 		};
 		cmp.config = {
-			// globalConsentLocation: '//acdn.origin.appnexus.net/cmp/docs/portal.html',
+			// globalConsentLocation: '//cdn.digitrust.mgr.consensu.org/1/portal.html',
 			storeConsentGlobally: false,
 			forceLocale: 'da-dk',
 			geoIPVendor: '//cdn.digitrust.mgr.consensu.org/1/geoip.json'
@@ -45,7 +45,7 @@ function handleConsentResult(cmp, vendorList, vendorConsents) {
 				eventAction: 'Visning',
 				eventLabel: window.location.hostname,
 				nonInteraction: true
-			});
+			});pubvendors.json
 		}, 1500);
 	}
 }
