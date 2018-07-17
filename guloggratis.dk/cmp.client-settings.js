@@ -25,9 +25,10 @@
 			}
 		};
 		cmp.config = {
-			globalConsentLocation: '//acdn.origin.appnexus.net/cmp/docs/portal.html',
+			// globalConsentLocation: '//acdn.origin.appnexus.net/cmp/docs/portal.html',
 			storeConsentGlobally: false,
-			forceLocale: 'da-dk'
+			forceLocale: 'da-dk',
+			geoIPVendor: '//cdn.digitrust.mgr.consensu.org/1/geoip.json'
 		};
 		return cmp;
 	}());
@@ -37,6 +38,15 @@ function handleConsentResult(cmp, vendorList, vendorConsents) {
 	var created = vendorConsents && vendorConsents.created;
 	if (!created) {
 		cmp('showConsentTool');
+		setTimeout(function(){
+			ga('send', {
+				hitType: 'event',
+				eventCategory: 'Cookie consent boks',
+				eventAction: 'Visning',
+				eventLabel: window.location.hostname,
+				nonInteraction: true
+			});
+		}, 1500);
 	}
 }
 
@@ -58,4 +68,14 @@ function checkConsent(cmp) {
 
 __cmp('addEventListener', 'cmpReady', function(result) {
 	checkConsent(window.__cmp);
+});
+
+window.__cmp('addEventListener', 'onSubmit', function(result) {
+	ga('send', {
+		hitType: 'event',
+		eventCategory: 'Cookie OK-knap',
+		eventAction: 'Klik',
+		eventLabel: window.location.hostname,
+		nonInteraction: true
+	});
 });
